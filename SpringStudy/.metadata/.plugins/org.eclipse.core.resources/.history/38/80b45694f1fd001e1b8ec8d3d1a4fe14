@@ -1,0 +1,80 @@
+package com.smhrd.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import com.smhrd.db.BoardMapper;
+import com.smhrd.model.BoardVO;
+import com.smhrd.model.SearchCriteria;
+
+@Controller // 기능이 정의되어 있음
+public class BoardController {
+
+	@Autowired
+	private BoardMapper mapper;
+	
+	// 비동기 통신으로 검색하는 기능
+	@RequestMapping("/search")
+	public void search(SearchCriteria criteria) {
+		System.out.println("수집 데이터 >> "+criteria);
+		List<BoardVO> list = mapper.search(criteria);
+		System.out.println(list);
+	}
+	
+	
+	
+	
+	// 글 삭제 기능
+	@GetMapping("/boardDelete/{idx}")
+	public String boardDelete(@PathVariable("idx") int idx) {
+
+		mapper.boardDelete(idx);
+
+		return "redirect:/";
+	}
+
+	// 글 상세조회 기능
+	@GetMapping("/boardContent/{idx}")
+	public String boardContent(@PathVariable("idx") int idx, Model model) {
+
+		BoardVO result = mapper.boardContent(idx);
+
+		model.addAttribute("board", result);
+
+		return "content";
+	}
+
+	// 글쓰기 기능을 하는 메소드 생성
+	@PostMapping("/register")
+	public String register(BoardVO vo) {
+
+		mapper.register(vo);
+
+		return "redirect:/";
+
+	}
+
+	@GetMapping("/register")
+	// 글쓰기 페이지로 이동하는 메소드
+	public String register() {
+		return "register";
+	}
+
+	@RequestMapping("/")
+	public String board(Model model) {
+
+		List<BoardVO> list = mapper.board();
+
+		model.addAttribute("list", list);
+
+		return "board";
+
+	}
+
+}

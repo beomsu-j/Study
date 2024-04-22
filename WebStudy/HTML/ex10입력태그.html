@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 입력태그를 사용할 때는
+         반드시 form태그로 감싸주기 -->
+  <!-- action : 입력한 데이터를 어디로 넘겨줄 건지 라는 속성 -->
+    <form action="#">
+        <input type="text" 
+        
+         autofocus
+         placeholder="😊아이디😊"
+         value="124"
+         maxlength="6">
+ 
+    <!-- input type="password" : 비밀번호 입력 -->
+    <input type="password">
+    <br>
+    <input type="button" value="로그인">
+    <br>
+    <!-- input type="checkbox" : 체크박스
+        **실제 데이터를 포함 시키려면
+        value값 지정 필수** -->
+    영화보기 <input type="checkbox" value="영화보기">
+    <br>
+    <!-- input type="checkbox" : 라디오 버튼
+        **중복으로 선택 불가능한 경우 사용** 
+        >> name 값을 동일하게 해줌으로써 
+        하나만 선택 가능하게 설계가능-->
+    남자<input type="radio" name="gender" value="남자">
+    여자<input type="radio" name="gender" value="여자">
+    <!-- 그 외 -->
+    <input type="color" name="" id="">
+    <br>
+    <input type="date" name="" id="">
+    <br>
+    <input type="number" name="" id="">
+    <br>
+    <input type="reset" value="초기화">
+    <!-- select태그 -->
+    <select>
+        <option value="">Java</option>
+        <option value="">Python</option>
+        <option value="">DB</option>
+
+    </select>
+</form>
+</body>
+</html>

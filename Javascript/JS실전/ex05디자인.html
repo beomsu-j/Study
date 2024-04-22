@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="txt">출튀마렵다</span>
+    <br>
+    <button id="btn" onclick="changestyle()">디자인 변경</button>
+    <script>
+        // 1.  버튼을 클릭 할 떄 디자인을 변경하는 함수 실행 -> 함수 제작
+        function changestyle(){
+            document.getElementById("txt").style.color="pink";
+            document.getElementById("txt").style.fontSize="150px";
+            document.getElementById("txt").style.border="bold";
+            // css를 효율적으로 작성하는 방법
+            document.getElementById("txt").style.cssText="color : blue; background-color:yellow;"
+        }
+        // 2. 함수 제작 -> id가 txt요의 스타일 변경, 글자크기, 색상, 굵기
+
+        // 직접 스타일을 제어하는 경우 인라인 방식으로 스타일이 작성
+        // 보안취약, 유지보수 힘듦 단순한 스타일 제어 할 때 사용
+    </script>
+</body>
+</html>

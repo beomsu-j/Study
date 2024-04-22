@@ -1,0 +1,5 @@
+%>
+			아이템<%=i %>
+			<input type="text" name="ran">
+			<br>
+			<% 

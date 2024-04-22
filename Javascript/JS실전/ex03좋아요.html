@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="txt">0</p>
+    <button id="plus" onclick="hpy()">좋아요</button>
+    <button id="minus" onclick="bad()">싫어요</button>
+
+    <script>
+        // 각각 함수를 제작하고 버튼에 연결
+        
+        function hpy(){
+            // 1을 더한다
+            // **p태그 안에 내용을 가지고 와서 숫자로 변경**
+            let num = Number(document.getElementById("txt").innerHTML)
+            // 변경된 데이터에 1을 더하겠다.
+            console.log(num+1)
+            // **변경된 데이터를 다시 p태그에 넣겠다.**
+            document.getElementById("txt").innerHTML=num+1
+        }
+
+        function bad(){
+            let num = Number(document.getElementById("txt").innerHTML)
+            if(num<=0){
+                document.getElementById("txt").innerHTML=0
+            }else(
+                document.getElementById("txt").innerHTML=num-1
+            );
+        }
+        
+        //  *실습정리*
+
+        // 1. 프로그래밍 언어 = 컴퓨터와 내가 소통하는 수단
+        // 코드를 작성할 땐 반드시 세세하게 컴퓨터에게 줄 명령을 인지(주석정리)
+        // 2. 내용을 변경할 때에는 반드시 최신화된 데이터를 반영
+        // 3. 콘솔창을 잘 활용하자(디버깅 할 때 가장 중요)
+        // 3-1 값이 옳바르게 반영 되어있나 체크할 때
+        // 3-2 코드의 흐름상 에러가 나는 부분을 찾을 때(코드 중간중간 console.log입력해보기)
+
+    </script>
+</body>
+</html>

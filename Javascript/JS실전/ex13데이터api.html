@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div id="text"></div>
+    <button id="btn">요청</button>
+
+    <script>
+        // 번외 - 스크립트 코드를 자바로 가지고 오고싶을떄 session을 이용하자
+        // 1. 버튼을 클릭했을 때 api url에 데이터 요청
+        $("#btn").on("click",function(){
+            // ajax를 통해서 비동기 요청
+            $.ajax({
+                // 1. 요청을 보낼 서버의 주소
+                // 프로젝트 할 때 url -> 백앤드 컨트롤러와 연관있는 부분/join
+                url : "http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=b6fea8169f28a91edcac38efe88e4e90&targetDt=20240304",
+               
+                // 2. 요청 방법을 명시 (get,post)
+                type : "get",
+               
+                // 3. 데이터를 보내는 공간
+                // data : "넘길 데이터" ->객체 데이터로
+               
+                // 4-1 응답데이터를 터리하는 공간(성공)
+                // 응답 성공시에는 반드시 매개변수에 저장
+                // json -> 자바스크립트 객체 데이터 -> key와 index를 잘 활용해서 꺼내오기
+                success : function(res){
+                    // console.log(res.boxOfficeResult.dailyBoxOfficeList[0].movieNm)
+                    // $("#text").html(res.boxOfficeResult.dailyBoxOfficeList[0].movieNm)
+                   // 모든 데이터를 랭크, 영화이름,개봉일자 출력
+                   
+                    console.log(res.boxOfficeResult.dailyBoxOfficeList)
+                    for(let i =0;i<res.boxOfficeResult.dailyBoxOfficeList.length;i++){
+                        let str =
+                         `  
+                            <span>랭크 : ${res.boxOfficeResult.dailyBoxOfficeList[i].rank}</span>
+                            <span>개봉일자 : ${res.boxOfficeResult.dailyBoxOfficeList[i].openDt}</span>
+                            <span>영화이름 : ${res.boxOfficeResult.dailyBoxOfficeList[i].movieNm}</span>
+                            <br>
+                         `
+                        $("#text").append(str)
+                    }
+                },
+                // 4-2 응답데이터를 터리하는 공간(실패)
+                error :function(){
+                    alert("요청실패요 ㅋㅅㅋ;")
+                } 
+            })
+        })
+        // 2. 성공 -> div 내용을 넣기
+
+    </script>
+</body>
+</html>

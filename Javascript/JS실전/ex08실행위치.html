@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <button id="btn">외부방식</button>
+    <script>
+
+        // 자바 스크립트 실행위치 총 3가지 (내,외부 인라인)
+
+        // 1. 내부방식 = html 코드안에 js를 작성하는 방식
+        // ㄴ 코드 노출 위험, 유지보수 불편, 파일의 용량 커짐
+        // ㄴ 사용처는 오직 로컬 개발할 때
+        
+        // 2. 인라인 방식 = tag안에 직접 코드를 작성하는 방식
+        // ㄴ 코드 노출, 유지보수 불편
+        // ㄴ 사용처 : 내장함수 같은 공개가 되도 상관 없는 코드는 작성해도 무방
+        
+        // 3. 외부방식 = html파일과 js파일을 분리
+        // ㄴ 코드가 노출 x, 유지보수 간편
+        // ㄴ 실행위치를 반드시 생각 1) 코드의 맨 밑 2) 코드실행 시 html생성 후 자성하도록 명령
+        // ㄴ 외부방식만 사용
+    </script>
+    <script src="function.js"></script>
+</body>
+</html>

@@ -1,0 +1,2 @@
+INDEX VERSION 1.134+C:\Users\smhrd\Desktop\Study\SpringStudy\.metadata\.plugins\org.eclipse.jdt.core
+984405575.index

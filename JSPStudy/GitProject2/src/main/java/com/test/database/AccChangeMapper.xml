@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+	<!DOCTYPE mapper
+	  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	<mapper namespace="com.test.mapper.AccChangeMapper">
+	    <insert id="acc_ch_input" parameterType="com.test.model.AccChangeVO">
+	    	insert into tb_accumulated_change(mem_id, height, weight, ch_date, ex_calories)
+	        values (#{mem_id}, #{height}, #{weight}, #{ch_date}, #{ex_calories})
+	    </insert>
+		
+		<!-- mem_id와 시작일부터 종료일까지의 신체 변화 데이터 가져오기 -->
+	    <select id="getAccChangeData" parameterType="com.test.model.AccChangeVO" resultType="com.test.model.AccChangeVO">
+	        SELECT * FROM tb_accumulated_change WHERE mem_id = #{mem_id} AND ch_date BETWEEN #{start_date} AND #{end_date};
+	    </select>   
+	</mapper>

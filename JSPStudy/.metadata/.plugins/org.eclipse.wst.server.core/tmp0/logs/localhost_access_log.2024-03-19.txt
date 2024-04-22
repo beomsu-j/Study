@@ -1,0 +1,10 @@
+127.0.0.1 - - [19/Mar/2024:09:13:29 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [19/Mar/2024:09:13:29 +0900] "GET /GitProject/WEB-INF/Views/join.jsp HTTP/1.1" 404 721
+0:0:0:0:0:0:0:1 - - [19/Mar/2024:09:13:43 +0900] "GET /GitProject/fitjoin.do HTTP/1.1" 200 7327
+0:0:0:0:0:0:0:1 - - [19/Mar/2024:09:13:43 +0900] "GET /GitProject/assets/img/join.jpg HTTP/1.1" 200 23153688
+0:0:0:0:0:0:0:1 - - [19/Mar/2024:09:13:55 +0900] "POST /GitProject/Login.do HTTP/1.1" 500 11664
+0:0:0:0:0:0:0:1 - - [19/Mar/2024:09:13:59 +0900] "POST /GitProject/Login.do HTTP/1.1" 500 11664
+0:0:0:0:0:0:0:1 - - [19/Mar/2024:09:14:42 +0900] "POST /GitProject/Login.do HTTP/1.1" 500 11664
+127.0.0.1 - - [19/Mar/2024:15:33:18 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [19/Mar/2024:15:33:18 +0900] "GET /servlet02/Ex03_Userinfo.html HTTP/1.1" 200 791
+0:0:0:0:0:0:0:1 - - [19/Mar/2024:15:33:23 +0900] "POST /servlet02/Ex03_UserInfo HTTP/1.1" 200 -

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.test.mapper.PtTimeMapper">
+
+
+	<select id="PT" parameterType="com.test.model.PersonalTrainingVO"
+		resultType="com.test.model.PersonalTrainingVO">
+		select*from tb_personal_training where trn_idx=#{trn_idx}
+	</select>
+	
+</mapper>

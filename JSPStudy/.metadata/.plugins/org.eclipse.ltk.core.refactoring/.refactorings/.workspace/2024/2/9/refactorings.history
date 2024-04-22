@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 4 elements from workspace&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Ex08createInput.html&#x0D;&#x0A;     Ex08createInput.jsp&#x0D;&#x0A;     Ex08randomWinner.jsp&#x0D;&#x0A;     Ex01_randomWinner.jsp" description="Delete elements" element1="/JSP02/src/main/webapp/Ex01_randomWinner.jsp" element2="/JSP01/src/main/webapp/Ex08createInput.jsp" element3="/JSP01/src/main/webapp/Ex08createInput.html" element4="/JSP01/src/main/webapp/Ex08randomWinner.jsp" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="4" stamp="1709100480234" subPackages="false" version="1.0"/>
+</session>

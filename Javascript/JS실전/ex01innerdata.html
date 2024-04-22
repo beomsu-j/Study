@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="txt"><span>😊안녕하세요😊</span></h1>
+    <button onclick="changeTxt()">1변경1</button>
+    <button id="btn1">2변경2</button>
+    <button id="btn2">3변경3</button>
+    <script>
+
+        // h1태그의 컨텐츠 값을 console창으로 출력
+        let h1 = document.getElementById("txt").innerHTML
+        console.log(h1)
+        
+        let h2 = document.getElementById("txt").innerText
+        console.log(h2)
+        // 요소를 접근.innerHTML -> HTML 태그를 인식
+        // 요소를 접근 innerText -> 태그인식 x 순수 컨텐츠 출력 
+
+        
+        //함수를 제작해보쟝
+        function changeTxt(){
+            document.getElementById("txt").innerHTML="<a href='http://www.naver.com'>┌( ಠ_ಠ)┘졸립다 갑자기┌( ಠ_ಠ)┘</a>"
+            // 특정요소의 컨텐츠를 수정
+            // 문자를 작성할 때 " "묶는 겨우에는 속성에 따옴표가 필요하면 ''사용
+            // 반대일 경우에는 반대로 사용
+        }
+
+        // 함수를 연결시키는 방법
+        // 1. 태그안에 직접 작성하는 인라인 방식
+        // 단점 : 보안에 취약, 이벤트를 하나만 명시
+        // 사용처 : alert()처럼 내장함수(누구나 아는 함수)는 사용해도 좋다 
+
+        // 2. 이벤트핸들러를 통한 이벤트 부여 방식
+        // 주의점 이벤트를 붙일때 ()제거하고 함수명만 작성할 것
+        document.getElementById("btn1").addEventListener("click",changeTxt)
+
+        // 3. 익명함수 -> 함수에 일므이 없다
+        // 사용이유 : 오직하나의 요소를 위해 동작하는 함수를 제작
+        document.getElementById("btn2").addEventListener("click",
+        function(){alert("익명함수")})
+    </script>
+</body>
+</html>

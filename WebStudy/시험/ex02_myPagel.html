@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+        }
+
+        #red {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+
+        #green {
+            background-color: green;
+            width: 100px;
+            height: 100px;
+        }
+
+        #blue {
+            background-color: blue;
+            position: relative;
+            width: 100px;
+            height: 100px;
+        }
+
+        #gray {
+            background-color: gray;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    </script>
+    <div id="red"></div>
+    <div id="green"></div>
+    <div id="blue"></div>
+    <div id="gray"></div>
+    <button id="btn1">Margin 이동!</button>
+    <button id="btn2">Border-radius 효과주기</button>
+    <script>
+
+        //1번버튼
+        document.getElementById('btn1').addEventListener('click', function () {
+            var divs = document.querySelectorAll('div');
+            divs.forEach(function (div) {
+
+                // div.style.marginLeft = '50px';
+                green.style.marginLeft = "100px";
+                blue.style.marginLeft = "200px";
+                gray.style.marginLeft = "300px";
+            });
+        });
+
+    </script>
+    <script src="ex02_myJsl.js"></script>
+</body>
+
+</html>

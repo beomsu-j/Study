@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+        .normal{
+            background-color: white;
+            color: black;
+        }
+        .dark{
+            background-color: black;
+            color: white;
+        }
+
+    </style>
+</head>
+<body class="normal">
+    <h1>다크모드용 텍스트</h1>
+    <button id="btn">다크모드 변경</button>
+
+    <script>
+
+        // 1.jQuery로 직접 디자인 조작
+               
+        // $("#btn").on("click",function(){
+            
+        //     if($("body").css("background-color")=="rgba(0,0,0)"){
+        //         $("body").css("background-color","black")
+        //         $("h1").css("color","white")
+        //     }else{
+        //         $("body").css("background-color","white")
+        //         $("h1").css("color","black")
+        //     }
+        // })
+
+        // 2. jQuery로 class변경
+        $("#btn").on("click",function(){
+            if($("body").hasClass("normal")){
+                $("body").removeClass("normal")
+                $("body").addClass("dark")
+            }else{
+                $("body").removeClass("dark")
+                $("body").addClass("normal")
+        }
+    })
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        // 배경색 바꾸는 방법
+        document.getElementsByTagName("body")[0].style.backgroundColor
+        // 사용자에게 원하는 색깔 3가지 입력(빨,파,초)
+        let colorChoice = prompt("원하는 색깔을 골라주세요 (빨강,초록,파랑)")
+        // 입력값이 빨강이라면 -> 빨강 파랑->파랑 초록->초록
+        if(colorChoice=="red"||colorChoice=="빨강"){
+            document.getElementsByTagName("body")[0].style.backgroundColor="red"
+        }else if(colorChoice=="green"||colorChoice=="초록"){
+            document.getElementsByTagName("body")[0].style.backgroundColor="green"
+        }else if(colorChoice=="blue"||colorChoice=="파랑"){
+            document.getElementsByTagName("body")[0].style.backgroundColor="blue"
+        }else{
+            document.getElementsByTagName("body")[0].style.backgroundColor="black"
+        }
+
+    </script>
+</body>
+</html>
